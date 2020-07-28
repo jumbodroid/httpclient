@@ -49,9 +49,6 @@ class Client implements ClientInterface
      * @param array                         $options         cURL options
      *                                                       {@link http://php.net/curl_setopt}.
      *
-     * @throws NotFoundException If factory discovery failed.
-     *
-     * @since 2.0 Accepts PSR-17 factories instead of HTTPlug ones.
      */
     public function __construct(
         ResponseFactoryInterface $responseFactory = null,
