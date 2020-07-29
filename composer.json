@@ -33,7 +33,8 @@
     "psr-4": {
       "Rayalois22\\HttpClient\\": "src",
       "Rayalois22\\Library\\": "src/Library"
-    }
+    },
+    "files": ["src/Psr7/funclude.php"]
   },
   "autoload-dev": {
     "psr-4": {
