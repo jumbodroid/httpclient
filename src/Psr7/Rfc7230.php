@@ -1,6 +1,6 @@
 <?php
 
-namespace GuzzleHttp\Psr7;
+namespace Rayalois22\HttpClient\Psr7;
 
 final class Rfc7230
 {
