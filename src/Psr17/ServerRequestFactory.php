@@ -1,4 +1,3 @@
-
 <?php
 
 namespace Rayalois22\HttpClient\Psr17;
