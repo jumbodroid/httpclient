@@ -173,11 +173,22 @@ class ServerRequest extends Request implements ServerRequestInterface
 
         $serverRequest = new ServerRequest($method, $uri, $headers, $body, $protocol, $_SERVER);
 
-        return $serverRequest
+        $isJson = false;
+        if( $serverRequest->hasHeader('content-type') &&
+            (stripos($serverRequest->getHeaderLine('content-type'), 'application/json') !== FALSE) &&
+            (strtoupper($serverRequest->getMethod()) != 'GET')
+        ) {
+            $isJson = true;
+        }
+
+        $serverRequest = $serverRequest
             ->withCookieParams($_COOKIE)
             ->withQueryParams($_GET)
-            ->withParsedBody($_POST)
             ->withUploadedFiles(self::normalizeFiles($_FILES));
+
+        return $isJson
+            ? $serverRequest->withParsedBody(file_get_contents("php://input"))
+            : $serverRequest->withParsedBody($_POST);
     }
 
     private static function extractHostAndPortFromAuthority($authority)

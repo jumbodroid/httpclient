@@ -192,6 +192,9 @@ class Client implements ClientInterface
             $curlOptions[CURLOPT_USERPWD] = $request->getUri()->getUserInfo();
         }
 
+        /*/
+        http://tutorialspots.com/php-example-of-usage-curlopt_headerfunction-3691.html
+        /*/
         $curlOptions[CURLOPT_HEADERFUNCTION] = function ($ch, $data) use ($responseBuilder) {
             $str = trim($data);
             if ('' !== $str) {
