@@ -19,7 +19,6 @@
   "require": {
     "php": "^7.2.5",
     "ext-curl": "*",
-    "illuminate/config": "7.11.*",
     "psr/http-message": "^1.0",
     "psr/http-factory": "^1.0",
     "psr/http-client": "^1.0",
@@ -32,8 +31,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Rayalois22\\HttpClient\\": "src",
-      "Rayalois22\\Library\\": "src/Library"
+      "Rayalois22\\HttpClient\\": "src"
     },
     "files": ["src/Psr7/funclude.php"]
   },

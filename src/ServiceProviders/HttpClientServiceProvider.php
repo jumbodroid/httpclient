@@ -3,13 +3,11 @@
 namespace Rayalois22\HttpClient\ServiceProviders;
 
 use Illuminate\Support\ServiceProvider;
-use Rayalois22\HttpClient\Contracts\SampleInterface;
-use Rayalois22\HttpClient\Facades\SampleFacadeAccessor;
-use Rayalois22\HttpClient\Sample;
+use Psr\Http\Client\ClientInterface;
+use Rayalois22\HttpClient\Contracts\HttpClient;
+use Rayalois22\HttpClient\Psr18\Client;
 
 /**
- * Class RbacServiceProvider
- *
  * @author  Alois Odhiambo  <rayalois22@gmail.com>
  */
 class HttpClientServiceProvider extends ServiceProvider
@@ -69,10 +67,8 @@ class HttpClientServiceProvider extends ServiceProvider
      */
     private function implementationBindings()
     {
-        $this->app->bind(
-            SampleInterface::class,
-            Sample::class
-        );
+        $this->app->bind(ClientInterface::class, Client::class);
+        $this->app->bind(HttpClient::class, Client::class);
     }
 
     /**
@@ -80,10 +76,7 @@ class HttpClientServiceProvider extends ServiceProvider
      */
     private function configPublisher()
     {
-        // When users execute Laravel's vendor:publish command, the config file will be copied to the specified location
-        $this->publishes([
-            __DIR__ . '/Config/httpclient.php' => config_path('rbac.php'),
-        ]);
+        // code
     }
 
     /**
@@ -91,16 +84,7 @@ class HttpClientServiceProvider extends ServiceProvider
      */
     private function facadeBindings()
     {
-        // Register 'httpclient.say' instance container
-        $this->app['httpclient.sample'] = $this->app->share(function ($app) {
-            return $app->make(Sample::class);
-        });
-
-        // Register 'Sample' Alias, So users don't have to add the Alias to the 'app/config/app.php'
-        $this->app->booting(function () {
-            $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-            $loader->alias('Sample', SampleFacadeAccessor::class);
-        });
+        // code
     }
 
     /**

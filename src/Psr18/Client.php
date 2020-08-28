@@ -2,16 +2,16 @@
 
 namespace Rayalois22\HttpClient\Psr18;
 
-use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamFactoryInterface;
+use Rayalois22\HttpClient\Contracts\HttpClient;
 use Rayalois22\HttpClient\Psr17\ResponseFactory;
 use Rayalois22\HttpClient\Psr17\StreamFactory;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class Client implements ClientInterface
+class Client implements HttpClient
 {
     /**
      * cURL options.
