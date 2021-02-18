@@ -1,8 +1,8 @@
 <?php
 
-namespace Rayalois22\HttpClient\Psr7;
+namespace Jumbodroid\HttpClient\Psr7;
 
-use Rayalois22\HttpClient\Psr7\Rfc7230;
+use Jumbodroid\HttpClient\Psr7\Rfc7230;
 use Psr\Http\Message\MessageInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;

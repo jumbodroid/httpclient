@@ -1,6 +1,6 @@
 <?php
 
-namespace Rayalois22\HttpClient\Facades;
+namespace Jumbodroid\HttpClient\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

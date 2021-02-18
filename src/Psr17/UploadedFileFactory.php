@@ -1,8 +1,8 @@
 <?php
 
-namespace Rayalois22\HttpClient\Psr17;
+namespace Jumbodroid\HttpClient\Psr17;
 
-use Rayalois22\HttpClient\Psr7\UploadedFile;
+use Jumbodroid\HttpClient\Psr7\UploadedFile;
 use Psr\Http\Message\UploadedFileFactoryInterface;
 use Psr\Http\Message\StreamInterface;
 use Psr\Http\Message\UploadedFileInterface;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Rayalois22\HttpClient\Contracts;
+namespace Jumbodroid\HttpClient\Contracts;
 
 use Psr\Http\Client\ClientInterface;
 

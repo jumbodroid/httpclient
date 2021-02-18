@@ -1,10 +1,10 @@
 <?php
 
-namespace Rayalois22\HttpClient\Psr17;
+namespace Jumbodroid\HttpClient\Psr17;
 
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\StreamInterface;
-use Rayalois22\HttpClient\Psr7;
+use Jumbodroid\HttpClient\Psr7;
 
 class StreamFactory implements StreamFactoryInterface
 {

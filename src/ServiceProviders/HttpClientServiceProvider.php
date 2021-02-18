@@ -1,11 +1,11 @@
 <?php
 
-namespace Rayalois22\HttpClient\ServiceProviders;
+namespace Jumbodroid\HttpClient\ServiceProviders;
 
 use Illuminate\Support\ServiceProvider;
 use Psr\Http\Client\ClientInterface;
-use Rayalois22\HttpClient\Contracts\HttpClient;
-use Rayalois22\HttpClient\Psr18\Client;
+use Jumbodroid\HttpClient\Contracts\HttpClient;
+use Jumbodroid\HttpClient\Psr18\Client;
 
 /**
  * @author  Alois Odhiambo  <rayalois22@gmail.com>

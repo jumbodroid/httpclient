@@ -1,6 +1,6 @@
 <?php
 
-namespace Rayalois22\HttpClient\Tests;
+namespace Jumbodroid\HttpClient\Tests;
 
 use PHPUnit\Framework\TestCase as PHPUnit;
 

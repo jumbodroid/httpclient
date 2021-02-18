@@ -1,6 +1,6 @@
 <?php
 
-namespace Rayalois22\HttpClient\Exceptions;
+namespace Jumbodroid\HttpClient\Exceptions;
 
 use Exception as CoreException;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Rayalois22\HttpClient\Psr18;
+namespace Jumbodroid\HttpClient\Psr18;
 
 use Psr\Http\Client\RequestExceptionInterface;
 use Psr\Http\Message\RequestInterface;

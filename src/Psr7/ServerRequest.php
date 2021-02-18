@@ -1,6 +1,6 @@
 <?php
 
-namespace Rayalois22\HttpClient\Psr7;
+namespace Jumbodroid\HttpClient\Psr7;
 
 use InvalidArgumentException;
 use Psr\Http\Message\ServerRequestInterface;

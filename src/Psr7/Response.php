@@ -1,5 +1,5 @@
 <?php
-namespace Rayalois22\HttpClient\Psr7;
+namespace Jumbodroid\HttpClient\Psr7;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamInterface;

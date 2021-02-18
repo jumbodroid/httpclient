@@ -1,14 +1,14 @@
 <?php
 
-namespace Rayalois22\HttpClient\Psr18;
+namespace Jumbodroid\HttpClient\Psr18;
 
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamFactoryInterface;
-use Rayalois22\HttpClient\Contracts\HttpClient;
-use Rayalois22\HttpClient\Psr17\ResponseFactory;
-use Rayalois22\HttpClient\Psr17\StreamFactory;
+use Jumbodroid\HttpClient\Contracts\HttpClient;
+use Jumbodroid\HttpClient\Psr17\ResponseFactory;
+use Jumbodroid\HttpClient\Psr17\StreamFactory;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class Client implements HttpClient
