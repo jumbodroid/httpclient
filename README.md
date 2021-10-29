@@ -12,3 +12,8 @@
 >Leverage httpclient to build modern interconnected applications for the web.
 
 **httpclient** saves you the hustle of dealing with the more mundane and lower level APIs needed to create interconnected web applications.
+
+## Installation  
+`composer require jumbodroid/httpclient`  
+
+## Usage  
