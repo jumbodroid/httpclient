@@ -1,6 +1,6 @@
 <?php
 
-if(! function_exists('Rayalois22\HttpClient\Psr7\str') )
+if(! function_exists('Jumbodroid\HttpClient\Psr7\str') )
 {
     require __DIR__ . '/functions.php';
 }

@@ -371,12 +371,18 @@ class Uri implements UriInterface
         return $uri;
     }
 
-    public function getScheme()
+    /**
+     * @inheritDoc
+     */
+    public function getScheme() : string
     {
         return $this->scheme;
     }
 
-    public function getAuthority()
+    /**
+     * @inheritDoc
+     */
+    public function getAuthority() : string
     {
         $authority = $this->host;
         if ($this->userInfo !== '') {
@@ -390,37 +396,58 @@ class Uri implements UriInterface
         return $authority;
     }
 
-    public function getUserInfo()
+    /**
+     * @inheritDoc
+     */
+    public function getUserInfo() : string
     {
         return $this->userInfo;
     }
 
-    public function getHost()
+    /**
+     * @inheritDoc
+     */
+    public function getHost() : string
     {
         return $this->host;
     }
 
-    public function getPort()
+    /**
+     * @inheritDoc
+     */
+    public function getPort() : ?int
     {
         return $this->port;
     }
 
-    public function getPath()
+    /**
+     * @inheritDoc
+     */
+    public function getPath() : string
     {
         return $this->path;
     }
 
-    public function getQuery()
+    /**
+     * @inheritDoc
+     */
+    public function getQuery() : string
     {
         return $this->query;
     }
 
-    public function getFragment()
+    /**
+     * @inheritDoc
+     */
+    public function getFragment() : string
     {
         return $this->fragment;
     }
 
-    public function withScheme($scheme)
+    /**
+     * @inheritDoc
+     */
+    public function withScheme(string $scheme) : UriInterface
     {
         $scheme = $this->filterScheme($scheme);
 
@@ -436,7 +463,10 @@ class Uri implements UriInterface
         return $new;
     }
 
-    public function withUserInfo($user, $password = null)
+    /**
+     * @inheritDoc
+     */
+    public function withUserInfo(string $user, ?string $password = null) : UriInterface
     {
         $info = $this->filterUserInfoComponent($user);
         if ($password !== null) {
@@ -454,7 +484,10 @@ class Uri implements UriInterface
         return $new;
     }
 
-    public function withHost($host)
+    /**
+     * @inheritDoc
+     */
+    public function withHost(string $host) : UriInterface
     {
         $host = $this->filterHost($host);
 
@@ -469,7 +502,10 @@ class Uri implements UriInterface
         return $new;
     }
 
-    public function withPort($port)
+    /**
+     * @inheritDoc
+     */
+    public function withPort(?int $port) : UriInterface
     {
         $port = $this->filterPort($port);
 
@@ -485,7 +521,10 @@ class Uri implements UriInterface
         return $new;
     }
 
-    public function withPath($path)
+    /**
+     * @inheritDoc
+     */
+    public function withPath(string $path) : UriInterface
     {
         $path = $this->filterPath($path);
 
@@ -500,7 +539,10 @@ class Uri implements UriInterface
         return $new;
     }
 
-    public function withQuery($query)
+    /**
+     * @inheritDoc
+     */
+    public function withQuery(string $query) : UriInterface
     {
         $query = $this->filterQueryAndFragment($query);
 
@@ -514,7 +556,10 @@ class Uri implements UriInterface
         return $new;
     }
 
-    public function withFragment($fragment)
+    /**
+     * @inheritDoc
+     */
+    public function withFragment(string $fragment) : UriInterface
     {
         $fragment = $this->filterQueryAndFragment($fragment);
 

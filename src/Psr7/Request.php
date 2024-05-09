@@ -72,7 +72,7 @@ class Request implements RequestInterface
      *
      * @return string
      */
-    public function getRequestTarget()
+    public function getRequestTarget() : string
     {
         if ($this->requestTarget !== null) {
             return $this->requestTarget;
@@ -106,7 +106,7 @@ class Request implements RequestInterface
      * @param mixed $requestTarget
      * @return static
      */
-    public function withRequestTarget($requestTarget)
+    public function withRequestTarget(string $requestTarget) : RequestInterface
     {
         if (preg_match('#\s#', $requestTarget)) {
             throw new InvalidArgumentException(
@@ -124,7 +124,7 @@ class Request implements RequestInterface
      *
      * @return string Returns the request method.
      */
-    public function getMethod()
+    public function getMethod() : string
     {
         return $this->method;
     }
@@ -144,7 +144,7 @@ class Request implements RequestInterface
      * @return static
      * @throws \InvalidArgumentException for invalid HTTP methods.
      */
-    public function withMethod($method)
+    public function withMethod(string $method) : RequestInterface
     {
         $this->assertMethod($method);
         $new = clone $this;
@@ -161,7 +161,7 @@ class Request implements RequestInterface
      * @return UriInterface Returns a UriInterface instance
      *     representing the URI of the request.
      */
-    public function getUri()
+    public function getUri() : UriInterface
     {
         return $this->uri;
     }
@@ -196,7 +196,7 @@ class Request implements RequestInterface
      * @param bool $preserveHost Preserve the original state of the Host header.
      * @return static
      */
-    public function withUri(UriInterface $uri, $preserveHost = false)
+    public function withUri(UriInterface $uri, bool $preserveHost = false) : RequestInterface
     {
         if ($uri === $this->uri) {
             return $this;
@@ -235,7 +235,7 @@ class Request implements RequestInterface
         $this->headers = [$header => [$host]] + $this->headers;
     }
 
-    private function assertMethod($method)
+    private function assertMethod(string $method)
     {
         if (!is_string($method) || $method === '') {
             throw new \InvalidArgumentException('Method must be a non-empty string.');

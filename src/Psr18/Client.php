@@ -37,7 +37,7 @@ class Client implements HttpClient
     /**
      * cURL synchronous requests handle.
      *
-     * @var resource|null
+     * @var \CurlHandle|object|null
      */
     private $handle;
 
@@ -90,7 +90,7 @@ class Client implements HttpClient
      */
     public function __destruct()
     {
-        if (is_resource($this->handle)) {
+        if (is_object($this->handle)) {
             curl_close($this->handle);
         }
     }
