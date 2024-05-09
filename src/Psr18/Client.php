@@ -69,13 +69,13 @@ class Client implements HttpClient
         // Our parsing will fail if this is set to true.
         $resolver->setAllowedValues(
             (string)CURLOPT_HEADER,
-            [false]
+            [false, true, 1, 0]
         );
 
         // Our parsing will fail if this is set to true.
         $resolver->setAllowedValues(
             (string)CURLOPT_RETURNTRANSFER,
-            [false]
+            [false, true, 1, 0]
         );
 
         // We do not know what everything curl supports and might support in the future.
